@@ -38,3 +38,4 @@ let $FZF_DEFAULT_COMMAND = 'find . -not -path "*.git*" -not -path "*.svn*" -not 
 nmap <C-n> :Files <cr>
 " search text in directories
 nmap <C-S-f> :Ack 
+set encoding=utf-8

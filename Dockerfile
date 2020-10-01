@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y tzdata vim git ruby-full gem ruby-dev curl golang curl python ack-grep
+RUN apt-get update && apt-get install -y tzdata vim git ruby-full gem ruby-dev curl golang curl python ack-grep build-essential cmake python3-dev nodejs openjdk-11-jdk
 RUN mkdir -p ~/.vim/autoload ~/.vim/bundle 
 COPY ./pathogen.vim /root/.vim/autoload/pathogen.vim
 
@@ -16,6 +16,8 @@ ENV TERM=xterm-256color
 ENV PATH=$PATH:/usr/local/lib/apt-vim:/root/.vimpkg/bin:$GOPATH/bin
 
 RUN apt-vim init
-COPY install.sh /root/install.sh
-RUN bash /root/install.sh
+COPY install-plugins.sh /root/
+RUN bash /root/install-plugins.sh
+COPY install-YouCompleteMe.sh /root/
+RUN bash /root/install-YouCompleteMe.sh
 CMD ["vim"]
