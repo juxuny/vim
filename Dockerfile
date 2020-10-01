@@ -18,6 +18,4 @@ ENV PATH=$PATH:/usr/local/lib/apt-vim:/root/.vimpkg/bin:$GOPATH/bin
 RUN apt-vim init
 COPY install-plugins.sh /root/
 RUN bash /root/install-plugins.sh
-COPY install-YouCompleteMe.sh /root/
-RUN bash /root/install-YouCompleteMe.sh
 CMD ["vim"]
