@@ -1,5 +1,5 @@
 apt-vim install -y https://github.com/preservim/nerdtree.git
-apt-vim install -y https://github.com/ctrlpvim/ctrlp.vim.git
+#apt-vim install -y https://github.com/ctrlpvim/ctrlp.vim.git
 apt-vim install -y https://github.com/groenewege/vim-less.git
 apt-vim install -y https://github.com/pangloss/vim-javascript.git
 apt-vim install -y https://github.com/vim-ruby/vim-ruby.git
