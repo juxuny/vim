@@ -3,8 +3,21 @@ vim in docker
 
 ### Usage
 
+
+##### Pull image from docker hub
+
 ```bash
-docker run --rm -it -w /work -v ${PWD}:/work  juxuny/vim:latest /bin/bash
+docker run --rm -it -w /work -v ${PWD}:/work  juxuny/vim /bin/bash
+```
+
+##### Build from source
+
+```bash
+git clone https://github.com/juxuny/vim.git
+docker build -t vim . -f Dockerfile
+
+# run vim in current direcory
+docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 ```
 
 ### plugins install 
@@ -38,6 +51,9 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 python3 install.py --all
 ```
+### Version 1.0.1
+
+* Remove ctrlp.vim
 
 ### Version 1.0.0
 
