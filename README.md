@@ -56,7 +56,7 @@ python3 install.py --all
 ### latest
 
 * Add Plugin jsx
-* *Ctrol + T* run command `:NERDTreeToggle`, toogle the directory tree
+* *Ctrl + T* run command `:NERDTreeToggle`, toogle the directory tree
 
 ### Version 1.0.1
 
