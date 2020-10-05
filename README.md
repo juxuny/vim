@@ -41,6 +41,7 @@ apt-vim install -y https://github.com/tpope/vim-commentary.git
 apt-vim install -y https://github.com/terryma/vim-multiple-cursors.git
 apt-vim install -y https://github.com/junegunn/fzf.vim.git
 # apt-vim install -y https://github.com/fatih/vim-go.git
+apt-vim install -y https://github.com/peitalin/vim-jsx-typescript.git
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "\n\n\n" | ~/.fzf/install
 
@@ -51,6 +52,12 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 python3 install.py --all
 ```
+
+### latest
+
+* Add Plugin jsx
+* *Ctrol + T* run command `:NERDTreeToggle`, toogle the directory tree
+
 ### Version 1.0.1
 
 * Remove ctrlp.vim
