@@ -15,6 +15,7 @@ apt-vim install -y https://github.com/itchyny/lightline.vim.git
 apt-vim install -y https://github.com/tpope/vim-commentary.git
 apt-vim install -y https://github.com/terryma/vim-multiple-cursors.git
 apt-vim install -y https://github.com/junegunn/fzf.vim.git
+apt-vim install -y https://github.com/peitalin/vim-jsx-typescript.git
 # apt-vim install -y https://github.com/fatih/vim-go.git
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "\n\n\n" | ~/.fzf/install
