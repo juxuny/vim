@@ -55,9 +55,10 @@ python3 install.py --all
 
 ### latest
 
-* *Ctrl + o* create a new line in insert mode
+* *Ctrl + o* create a new line in normal or insert mode
 * Add Plugin jsx
 * *Ctrl + T* run command `:NERDTreeToggle`, toogle the directory tree
+
 
 ### Version 1.0.1
 
