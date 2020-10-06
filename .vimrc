@@ -41,3 +41,4 @@ nmap <C-t> :NERDTreeToggle <cr>
 nmap <C-n> :Files <cr>
 " search text in directories
 nmap <C-S-f> :Ack 
+imap <C-o> <ESC>o
