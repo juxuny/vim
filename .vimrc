@@ -42,3 +42,4 @@ nmap <C-n> :Files <cr>
 " search text in directories
 nmap <C-S-f> :Ack 
 imap <C-o> <ESC>o
+nmap <C-o> o<ESC><ESC>
