@@ -55,6 +55,7 @@ python3 install.py --all
 
 ### latest
 
+* reopen files at your last edit position
 * autoindent
 * *Ctrl + o* create a new line in normal or insert mode
 * Add Plugin jsx
