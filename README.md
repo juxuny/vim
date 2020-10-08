@@ -55,6 +55,7 @@ python3 install.py --all
 
 ### latest
 
+* autoindent
 * *Ctrl + o* create a new line in normal or insert mode
 * Add Plugin jsx
 * *Ctrl + T* run command `:NERDTreeToggle`, toogle the directory tree
