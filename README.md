@@ -20,6 +20,11 @@ docker build -t vim . -f Dockerfile
 docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 ```
 
+### latest
+
+* *Ctrl + h* jump to the beginning of a line
+* *Ctrl + l* jump to the end of a line
+
 ### v1.0.2
 
 * add colorscheme `peaksea`, and set 'peaksea' as default colorscheme
