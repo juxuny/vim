@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y tzdata vim git ruby-full gem ruby-dev curl golang curl python ack-grep build-essential cmake python3-dev nodejs openjdk-11-jdk
+RUN apt-get install -y npm
 RUN mkdir -p ~/.vim/autoload ~/.vim/bundle 
 COPY ./pathogen.vim /root/.vim/autoload/pathogen.vim
 

@@ -49,4 +49,7 @@ nmap <C-j> 20j
 imap <C-k> <ESC>20ki
 imap <C-j> <ESC>20ji
 nmap <C-k> 20k
+imap <C-l> <ESC>$a
+imap <C-h> <ESC>^i
+
 
