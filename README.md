@@ -55,6 +55,8 @@ python3 install.py --all
 
 ### latest
 
+* *Ctrl + j* scroll down 20 lines
+* *Ctrl + k* scroll up 20 lines
 * reopen files at your last edit position
 * autoindent
 * *Ctrl + o* create a new line in normal or insert mode
