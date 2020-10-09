@@ -9,7 +9,12 @@ apt-vim install -y https://github.com/plasticboy/vim-markdown.git
 apt-vim install -y https://github.com/vim-scripts/nginx.vim.git
 apt-vim install -y https://github.com/rust-lang/rust.vim.git
 apt-vim install -y https://github.com/Vimjas/vim-python-pep8-indent.git
+# install color themes
+apt-vim install -y https://github.com/vim-scripts/peaksea.git
 apt-vim install -y https://github.com/altercation/vim-colors-solarized.git
+apt-vim install -y https://github.com/vim-scripts/mayansmoke.git
+apt-vim install -y https://github.com/wesgibbs/vim-irblack.git
+
 apt-vim install -y https://github.com/mileszs/ack.vim.git
 apt-vim install -y https://github.com/itchyny/lightline.vim.git
 apt-vim install -y https://github.com/tpope/vim-commentary.git
