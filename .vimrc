@@ -45,4 +45,6 @@ nmap <C-S-f> :Ack
 imap <C-o> <ESC>o
 nmap <C-o> o<ESC><ESC>
 nmap <C-j> 20j
+imap <C-k> 20k
+imap <C-j> 20j
 nmap <C-k> 20k
