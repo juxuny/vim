@@ -55,6 +55,7 @@ python3 install.py --all
 
 ### latest
 
+* add colorscheme `peaksea`, and set 'peaksea' as default colorscheme
 * *Ctrl + j* scroll down 20 lines
 * *Ctrl + k* scroll up 20 lines
 * reopen files at your last edit position
