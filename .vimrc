@@ -54,5 +54,7 @@ imap <C-l> <ESC>$a
 imap <C-h> <ESC>^i
 nmap <C-l> <ESC>$
 nmap <C-h> <ESC>^
+vmap <C-l> <ESC>$
+vmap <C-h> <ESC>^
 
 
