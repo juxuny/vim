@@ -22,6 +22,7 @@ docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 
 ### latest
 
+* *fmt* format javascript file
 * set yaml file comment string as '#'
 * *Ctrl + h* jump to the beginning of a line
 * *Ctrl + l* jump to the end of a line

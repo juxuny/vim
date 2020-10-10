@@ -56,5 +56,5 @@ nmap <C-l> <ESC>$
 nmap <C-h> <ESC>^
 vmap <C-l> <ESC>$
 vmap <C-h> <ESC>^
-
+autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
 

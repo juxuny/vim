@@ -30,3 +30,4 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 python3 install.py --all
 apt-vim install -y https://github.com/farmergreg/vim-lastplace.git
+npm -g install js-beautify
