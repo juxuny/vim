@@ -10,6 +10,7 @@ set noshowmode
 " custom commentstring
 autocmd FileType go setlocal commentstring=//\ %s
 autocmd FileType vim setlocal commentstring=\"\ %s
+autocmd FileType yaml setlocal commentstring=#\ %s
 
 " color theme
 let g:solarized_termcolors=256
@@ -51,5 +52,7 @@ imap <C-j> <ESC>20ji
 nmap <C-k> 20k
 imap <C-l> <ESC>$a
 imap <C-h> <ESC>^i
+nmap <C-l> <ESC>$
+nmap <C-h> <ESC>^
 
 
