@@ -45,6 +45,7 @@ nmap <C-n> :Files <cr>
 " search text in directories
 nmap <C-S-f> :Ack 
 imap <C-o> <ESC>o
+imap <C-m> <ESC>ko
 nmap <C-o> o<ESC><ESC>
 nmap <C-j> 20j
 imap <C-k> <ESC>20ki
