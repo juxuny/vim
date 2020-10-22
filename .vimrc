@@ -25,7 +25,7 @@ colorscheme peaksea
 " fzf
 set rtp+=~/.fzf
 " search files
-let $FZF_DEFAULT_COMMAND = 'find . -not -path "*.git*" -not -path "*.svn*" -not -path "*.idea"'
+let $FZF_DEFAULT_COMMAND = 'find . -not -path "*.git/*" -not -path "*.svn*" -not -path "*.idea"'
 set encoding=utf-8
 
 " ----------------------------------------------------------- key mapping ---------------------------------------------------------
