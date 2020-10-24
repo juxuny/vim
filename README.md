@@ -22,6 +22,7 @@ docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 
 ### latest
 
+* show branch name on statusline
 * add git plugin: `tpope/vim-fugitive`
 * don't ignore '.gitignore' file when using *Ctrl + N* open another file
 * *Ctrl + n* add a new line above
