@@ -57,6 +57,8 @@ nmap <C-l> <ESC>$
 nmap <C-h> <ESC>^
 vmap <C-l> <ESC>$
 vmap <C-h> <ESC>^
+nmap <C-B> :MerginalToggle<cr>
+
 autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
 autocmd FileType go nmap <buffer> fmt :!go fmt % <cr>
 

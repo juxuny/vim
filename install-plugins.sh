@@ -34,3 +34,5 @@ npm -g install js-beautify
 
 # git plugin
 apt-vim install -y https://github.com/tpope/vim-fugitive.git
+# switch branch
+apt-vim install -y https://github.com/idanarye/vim-merginal.git
