@@ -57,8 +57,10 @@ nmap <C-l> <ESC>$
 nmap <C-h> <ESC>^
 vmap <C-l> <ESC>$
 vmap <C-h> <ESC>^
-nmap <C-B> :MerginalToggle<cr>
+" nmap <C-B> :MerginalToggle<cr>
+nmap <C-B> :Gbranch<cr>
 
+" format code
 autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
 autocmd FileType go nmap <buffer> fmt :!go fmt % <cr>
 
@@ -77,3 +79,14 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveStatusline'
       \ },
       \ }
+
+function! s:changebranch(branch)
+    execute 'Git checkout' . a:branch
+    " enter insert mode
+    " call feedkeys("i")
+endfunction
+
+command! -bang Gbranch call fzf#run({
+            \ 'source': 'git branch -a --no-color | grep -v "^\* " ',
+            \ 'sink': function('s:changebranch')
+            \ })
