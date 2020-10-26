@@ -22,6 +22,8 @@ docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 
 ### latest
 
+* *tt* NERDTreeToggle
+* add *vim-go* plugin, :GoDef, :GoDoc, :GoReferrers
 * *Ctrl + B* git branch switcher
 * show branch name on statusline
 * add git plugin: `tpope/vim-fugitive`

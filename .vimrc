@@ -1,4 +1,5 @@
 execute pathogen#infect()
+filetype plugin indent on
 set nu
 set autoindent
 set laststatus=2
@@ -40,7 +41,7 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 " NERDTreeToggle
-nmap <C-t> :NERDTreeToggle <cr>
+nmap tt :NERDTreeToggle <cr>
 nmap <C-n> :Files <cr>
 " search text in directories
 nmap <C-S-f> :Ack 
@@ -67,7 +68,7 @@ autocmd FileType go nmap <buffer> fmt :!go fmt % <cr>
 " show branch name on statusline
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'charvaluehex' ] ]
