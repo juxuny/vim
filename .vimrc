@@ -60,10 +60,12 @@ vmap <C-l> <ESC>$
 vmap <C-h> <ESC>^
 " nmap <C-B> :MerginalToggle<cr>
 nmap <C-B> :Gbranch<cr>
+nmap gr :GoReferrers<cr>
 
 " format code
 autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
 autocmd FileType go nmap <buffer> fmt :!go fmt % <cr>
+autocmd FileType go nmap <buffer> <F1> :call go#lsp#Restart()<cr>
 
 " show branch name on statusline
 set laststatus=2

@@ -22,6 +22,8 @@ docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 
 ### latest
 
+* *F1* restart go-lsp
+* *gr* :GoReferrers
 * *tt* NERDTreeToggle
 * add *vim-go* plugin, :GoDef, :GoDoc, :GoReferrers
 * *Ctrl + B* git branch switcher
