@@ -1,3 +1,4 @@
+
 vim in docker
 =============
 
@@ -20,8 +21,9 @@ docker build -t vim . -f Dockerfile
 docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 ```
 
-### latest
+### v1.2.0 & latest
 
+* add *jedi-vim* and *pip3*
 * *F1* restart go-lsp
 * *gr* :GoReferrers
 * *tt* NERDTreeToggle
@@ -62,4 +64,6 @@ docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 * *Ctrl + N* open new file
 * *Ctrl + Shift + F* search content in directory
 * *Ctrl + 6* switch to last file
+
+
 

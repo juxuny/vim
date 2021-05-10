@@ -42,3 +42,6 @@ vim +GoInstallBinaries <<EOF
 :q
 
 EOF
+apt-get install -y python3-pip
+pip3 install jedi
+apt-vim install -y https://github.com/davidhalter/jedi-vim.git
