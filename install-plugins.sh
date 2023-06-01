@@ -27,7 +27,7 @@ echo "\n\n\n" | ~/.fzf/install
 apt-vim install -y https://github.com/ycm-core/YouCompleteMe.git
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
-python3 install.py --all
+python3 install.py --all --force-sudo
 apt-vim install -y https://github.com/farmergreg/vim-lastplace.git
 npm -g install js-beautify
 
