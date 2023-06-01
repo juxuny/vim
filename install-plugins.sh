@@ -24,7 +24,8 @@ apt-vim install -y https://github.com/peitalin/vim-jsx-typescript.git
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "\n\n\n" | ~/.fzf/install
 
-apt-vim install -y https://github.com/ycm-core/YouCompleteMe.git
+#apt-vim install -y https://github.com/ycm-core/YouCompleteMe.git
+apt-vim install -y https://github.com/tabnine/YouCompleteMe.git
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 python3 install.py --all --force-sudo
