@@ -1,3 +1,6 @@
 vim
 tmp
 *.swp
+*.gz
+*.tar
+*.tar.gz
