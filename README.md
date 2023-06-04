@@ -1,17 +1,14 @@
+# Vim in Docker
 
-vim in docker
-=============
+## Usage
 
-### Usage
-
-
-##### Pull image from docker hub
+## Pull image from docker hub
 
 ```bash
 docker run --rm -it -w /work -v ${PWD}:/work  juxuny/vim /bin/bash
 ```
 
-##### Build from source
+### Build from source
 
 ```bash
 git clone https://github.com/juxuny/vim.git
@@ -20,6 +17,34 @@ docker build -t vim . -f Dockerfile
 # run vim in current direcory
 docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 ```
+
+### v1.4.0
+
+* use `coc.nvim` and `coc-tabnine`
+* built-in coc extansions:
+  * `coc-tabnine`
+  * `coc-tsserver`
+  * `coc-json`
+  * `coc-html`
+  * `coc-sql`
+  * `coc-lua`
+  * `coc-css`
+  * `coc-less`
+  * `coc-sass`
+  * `coc-eslint`
+  * `coc-wxml`
+  * `coc-xml`
+  * `coc-stylelint`
+  * `coc-tslint`
+  * `coc-go`
+  * `coc-php`
+  * `coc-sh`
+  * `coc-flutter`
+  * `coc-dlang`
+  * `coc-java`
+  * `coc-markdownlint`
+  * `coc-pylsp`
+  * `coc-snippets`
 
 ### v1.2.0 & latest
 
@@ -49,7 +74,6 @@ docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 * Add Plugin jsx
 * *Ctrl + T* run command `:NERDTreeToggle`, toogle the directory tree
 
-
 ### v1.0.1
 
 * Remove ctrlp.vim
@@ -64,6 +88,3 @@ docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 * *Ctrl + N* open new file
 * *Ctrl + Shift + F* search content in directory
 * *Ctrl + 6* switch to last file
-
-
-

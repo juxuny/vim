@@ -22,8 +22,8 @@ RUN cd /usr/local/lib/apt-vim && apt-vim init
 #RUN bash /root/install-plugins.sh
 #CMD ["/bin/bash"]
 #ENTRYPOINT ["vim"]
-#RUN apt-vim install -y https://github.com/preservim/nerdtree.git
-#apt-vim install -y https://github.com/ctrlpvim/ctrlp.vim.git
+RUN apt-vim install -y https://github.com/preservim/nerdtree.git
+#RUN apt-vim install -y https://github.com/ctrlpvim/ctrlp.vim.git
 #RUN apt-vim install -y https://github.com/groenewege/vim-less.git
 #RUN apt-vim install -y https://github.com/pangloss/vim-javascript.git
 #RUN apt-vim install -y https://github.com/vim-ruby/vim-ruby.git
@@ -34,7 +34,7 @@ RUN cd /usr/local/lib/apt-vim && apt-vim init
 #RUN apt-vim install -y https://github.com/rust-lang/rust.vim.git
 #RUN apt-vim install -y https://github.com/Vimjas/vim-python-pep8-indent.git
 # install color themes
-#RUN apt-vim install -y https://github.com/vim-scripts/peaksea.git
+RUN apt-vim install -y https://github.com/vim-scripts/peaksea.git
 RUN apt-vim install -y https://github.com/altercation/vim-colors-solarized.git
 RUN apt-vim install -y https://github.com/vim-scripts/mayansmoke.git
 #RUN apt-vim install -y https://github.com/wesgibbs/vim-irblack.git
@@ -62,4 +62,6 @@ RUN npm config set registry http://registry.npmmirror.com
 RUN npm install -g yarn
 RUN cd /root/.vim/bundle/coc.nvim && yarn install
 RUN vim +'GoInstallBinaries' +qall
-RUN vim +'CocInstall -sync coc-tsserver coc-go coc-tabnine' +qall
+WORKDIR /root/
+COPY init.vim .
+RUN vim -s init.vim 
