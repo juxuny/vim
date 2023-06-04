@@ -21,12 +21,12 @@ else
     set background=dark
 endif
 " colorscheme solarized
-colorscheme peaksea
+" colorscheme peaksea
 
 " fzf
 set rtp+=~/.fzf
 " search files
-let $FZF_DEFAULT_COMMAND = 'find . -not -path "*.git/*" -not -path "*.svn*" -not -path "*.idea"'
+let $FZF_DEFAULT_COMMAND = 'find . -not -path "*.git/*" -not -path "*.svn*" -not -path "*.idea" -not -path "*node_modules/*"'
 set encoding=utf-8
 
 " ----------------------------------------------------------- key mapping ---------------------------------------------------------
@@ -59,7 +59,7 @@ nmap <C-h> <ESC>^
 vmap <C-l> <ESC>$
 vmap <C-h> <ESC>^
 " nmap <C-B> :MerginalToggle<cr>
-nmap <C-B> :Gbranch<cr>
+" nmap <C-B> :Gbranch<cr>
 nmap gr :GoReferrers<cr>
 
 " format code
@@ -73,23 +73,51 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'charvaluehex' ] ]
+      \             [ 'readonly', 'filename', 'modified', 'charvaluehex' ] ]
       \ },
       \ 'component': {
       \   'charvaluehex': '0x%B'
       \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveStatusline'
-      \ },
       \ }
 
-function! s:changebranch(branch)
-    execute 'Git checkout' . a:branch
-    " enter insert mode
-    " call feedkeys("i")
+
+"CoC Settings
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-command! -bang Gbranch call fzf#run({
-            \ 'source': 'git branch -a --no-color | grep -v "^\* " ',
-            \ 'sink': function('s:changebranch')
-            \ })
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"Ultisnips Settings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+"coc-snippets Settings
+"inoremap <silent><expr> <TAB>
+"      \ coc#pum#visible() ? coc#_select_confirm() :
+"      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"      \ CheckBackspace() ? "\<TAB>" :
+"      \ coc#refresh()
+"
+"function! CheckBackspace() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"let g:coc_snippet_next = '<tab>'
