@@ -12,10 +12,17 @@ docker run --rm -it -w /work -v ${PWD}:/work  juxuny/vim /bin/bash
 
 ```bash
 git clone https://github.com/juxuny/vim.git
-docker build -t vim . -f Dockerfile
+./build-tabnine.sh
 
 # run vim in current direcory
-docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
+#docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
+docker run --rm -it 
+  -w /work -v ${PWD}:/work \
+  --entrypoint vim \
+  -v /etc/passwd:/etc/passwd:ro \
+  -v /etc/group:/etc/group:ro  \
+  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.4.0 \
+  "$@"
 ```
 
 ### v1.4.0
