@@ -21,7 +21,7 @@ else
     set background=dark
 endif
 " colorscheme solarized
-" colorscheme peaksea
+colorscheme peaksea
 
 " fzf
 set rtp+=~/.fzf
