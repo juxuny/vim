@@ -58,3 +58,10 @@ RUN vim +'GoInstallBinaries' +qall
 WORKDIR $HOME
 COPY init.vim .
 RUN vim -s init.vim 
+
+# install nvm
+COPY install-nvm.sh .
+COPY install-nvm-wrapper.sh .
+COPY bashrc.expand .
+RUN cat install-nvm-wrapper.sh | bash
+
