@@ -121,3 +121,9 @@ let g:UltiSnipsEditSplit="vertical"
 "endfunction
 "
 "let g:coc_snippet_next = '<tab>'
+
+
+" set auto indent space width
+autocmd BufNewFile,BufRead *.tsx,*.js,*.html,*.xml,*.vue,*.ts,*.jsx,*.json set expandtab tabstop=2 shiftwidth=2
+autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+

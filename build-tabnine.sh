@@ -7,4 +7,4 @@ fi
 if [ ! -f go1.18.10.linux-amd64.tar.gz ]; then
 	wget https://go.dev/dl/go1.18.10.linux-amd64.tar.gz
 fi
-docker build -t registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.4.2 -f tabnine.dockerfile .
+docker build -t registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.4.3 -f tabnine.dockerfile .
