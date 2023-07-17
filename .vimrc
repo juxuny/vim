@@ -20,8 +20,10 @@ if has('gui_running')
 else
     set background=dark
 endif
+
+colorscheme onedark
 " colorscheme solarized
-colorscheme peaksea
+" colorscheme peaksea
 
 " fzf
 set rtp+=~/.fzf

@@ -34,6 +34,8 @@ RUN apt-vim install -y https://github.com/rust-lang/rust.vim.git
 RUN apt-vim install -y https://github.com/vim-scripts/peaksea.git
 RUN apt-vim install -y https://github.com/altercation/vim-colors-solarized.git
 RUN apt-vim install -y https://github.com/vim-scripts/mayansmoke.git
+#RUN apt-vim install -y https://github.com/joshdick/onedark.nvim.git
+RUN apt-vim install -y https://github.com/joshdick/onedark.vim.git
 RUN apt-vim install -y https://github.com/wesgibbs/vim-irblack.git
 
 RUN apt-vim install -y https://github.com/mileszs/ack.vim.git
@@ -64,4 +66,9 @@ COPY install-nvm.sh .
 COPY install-nvm-wrapper.sh .
 COPY bashrc.expand .
 RUN cat install-nvm-wrapper.sh | bash
+
+
+USER root 
+RUN chown -R vim:vim /home/vim
+USER vim
 
