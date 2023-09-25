@@ -21,7 +21,7 @@ docker run --rm -it
   --entrypoint vim \
   -v /etc/passwd:/etc/passwd:ro \
   -v /etc/group:/etc/group:ro  \
-  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.4.0 \
+  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.5.0 \
   "$@"
 ```
 
