@@ -25,6 +25,14 @@ docker run --rm -it
   "$@"
 ```
 
+### v1.5.0 
+
+* shortcut: 
+  * gr: go to references
+  * gd: go to definition
+  * gi: go to implement
+  * ctrl+h: history / recent files  
+
 ### v1.4.0
 
 * use `coc.nvim` and `coc-tabnine`
