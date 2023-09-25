@@ -54,15 +54,20 @@ nmap <C-j> 20j
 imap <C-k> <ESC>20ki
 imap <C-j> <ESC>20ji
 nmap <C-k> 20k
-imap <C-l> <ESC>$a
-imap <C-h> <ESC>^i
-nmap <C-l> <ESC>$
-nmap <C-h> <ESC>^
-vmap <C-l> <ESC>$
-vmap <C-h> <ESC>^
+" imap <C-l> <ESC>$a
+" imap <C-h> <ESC>^i
+" nmap <C-l> <ESC>$
+" nmap <C-h> <ESC>^
+" vmap <C-l> <ESC>$
+" vmap <C-h> <ESC>^
 " nmap <C-B> :MerginalToggle<cr>
 " nmap <C-B> :Gbranch<cr>
-nmap gr :GoReferrers<cr>
+"
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <C-h> :History <cr>
 
 " format code
 autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
