@@ -17,6 +17,7 @@ git clone https://github.com/juxuny/vim.git
 # run vim in current direcory
 #docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
 docker run --rm -it \
+  --user $(id -u):$(id -g)
   -w /work -v ${PWD}:/work \
   --entrypoint vim \
   -v /etc/passwd:/etc/passwd:ro \
