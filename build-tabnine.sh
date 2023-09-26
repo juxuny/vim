@@ -7,4 +7,7 @@ fi
 if [ ! -f go1.18.10.linux-amd64.tar.gz ]; then
 	wget https://go.dev/dl/go1.18.10.linux-amd64.tar.gz
 fi
-docker build -t registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.5.0 -f tabnine.dockerfile .
+REPOSITORY=registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim
+VERSION=v1.6.0
+docker build -t ${REPOSITORY}:${VERSION} -f tabnine.dockerfile . 
+echo "docker push ${REPOSITORY}:${VERSION}"

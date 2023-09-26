@@ -134,3 +134,7 @@ let g:UltiSnipsEditSplit="vertical"
 autocmd BufNewFile,BufRead *.tsx,*.js,*.html,*.xml,*.vue,*.ts,*.jsx,*.json set expandtab tabstop=2 shiftwidth=2
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 
+" jump to errors
+" nmap <silent> <F3> <Plug>(ale_previous_wrap)
+nmap <silent> <F2> <Plug>(ale_next_wrap)
+
