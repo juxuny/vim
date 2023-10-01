@@ -12,7 +12,8 @@ COPY ./pathogen.vim $HOME/.vim/autoload/pathogen.vim
 COPY .vimrc $HOME/.vimrc
 
 # install golang
-ADD go1.18.10.linux-amd64.tar.gz $HOME
+# ADD go1.18.10.linux-amd64.tar.gz $HOME
+ADD go1.20.8.linux-amd64.tar.gz $HOME
 ENV GOPATH=$HOME/gopath
 ENV GOPROXY=https://goproxy.cn
 ENV GOROOT=$HOME/go
@@ -72,4 +73,5 @@ RUN cat install-nvm-wrapper.sh | bash
 USER root 
 RUN chown -R vim:vim /home/vim
 USER vim
+RUN mkdir -p $HOME/.cache && chmod 777 $HOME/.cache
 
