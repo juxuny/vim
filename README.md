@@ -25,6 +25,9 @@ docker run --rm -it \
   registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.6.0 \
   "$@"
 ```
+
+### go1.20.8-v1.7.0
+
 ### v1.6.0
 
 * shortcut 
@@ -67,7 +70,7 @@ docker run --rm -it \
   * `coc-pylsp`
   * `coc-snippets`
 
-### v1.2.0 & latest
+### v1.2.0
 
 * add *jedi-vim* and *pip3*
 * *F1* restart go-lsp
@@ -109,4 +112,5 @@ docker run --rm -it \
 * *Ctrl + N* open new file
 * *Ctrl + Shift + F* search content in directory
 * *Ctrl + 6* switch to last file
+
 
