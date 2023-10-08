@@ -12,7 +12,8 @@ COPY ./pathogen.vim $HOME/.vim/autoload/pathogen.vim
 COPY .vimrc $HOME/.vimrc
 
 # install golang
-ADD go1.18.10.linux-amd64.tar.gz $HOME
+# ADD go1.18.10.linux-amd64.tar.gz $HOME
+ADD go1.20.8.linux-amd64.tar.gz $HOME
 ENV GOPATH=$HOME/gopath
 ENV GOPROXY=https://goproxy.cn
 ENV GOROOT=$HOME/go
@@ -44,6 +45,7 @@ RUN apt-vim install -y https://github.com/tpope/vim-commentary.git
 RUN apt-vim install -y https://github.com/terryma/vim-multiple-cursors.git
 RUN apt-vim install -y https://github.com/junegunn/fzf.vim.git
 RUN apt-vim install -y https://github.com/peitalin/vim-jsx-typescript.git
+RUN apt-vim install -y https://github.com/dense-analysis/ale.git
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 RUN echo "\n\n\n" | ~/.fzf/install
 
@@ -71,4 +73,5 @@ RUN cat install-nvm-wrapper.sh | bash
 USER root 
 RUN chown -R vim:vim /home/vim
 USER vim
+RUN mkdir -p $HOME/.cache && chmod 777 $HOME/.cache
 

@@ -25,6 +25,10 @@ docker run --rm -it \
   registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.6.0 \
   "$@"
 ```
+### v1.6.0
+
+* shortcut 
+  * F2 jump to next errors (https://github.com/dense-analysis/ale)
 
 ### v1.5.0 
 
@@ -33,6 +37,7 @@ docker run --rm -it \
   * gd: go to definition
   * gi: go to implement
   * ctrl+h: history / recent files  
+
 
 ### v1.4.0
 
@@ -104,3 +109,4 @@ docker run --rm -it \
 * *Ctrl + N* open new file
 * *Ctrl + Shift + F* search content in directory
 * *Ctrl + 6* switch to last file
+
