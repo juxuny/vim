@@ -9,22 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-      registry: ${{ vars.ALIYUN_SHENZHEN_REGISTRY }}
     steps:
     - uses: actions/checkout@v3
     - name: Test Enviroment
+      env: 
+        registry: ${{ vars.ALIYUN_SHENZHEN_REGISTRY }}
       run: echo $registry
-    - name: Login Registry
-      uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
-      with:
-        registry: registry.cn-shenzhen.aliyuncs.com
-        username: ${{ secrets.DOCKER_USER }}
-        password: ${{ secrets.DOCKER_PASS }}
-      secrets:
-        username: ${{ secrets.DOCKER_USER }}
-        password: ${{ secrets.DOCKER_PASS }}
-      env:
-        registry: ${{ env.ALIYUN_SHENZHEN_REGISTRY }}
-    - name: Download Archive Files
-      run: sh dl.sh
