@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Test Enviroment
-      env: 
-        registry: ${{ vars.ALIYUN_SHENZHEN_REGISTRY }}
-      run: echo $registry
+    - name: Download Archive Files
+      run: sh dl.sh
+    - name: Login to Hub
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ vars.ALIYUN_SHENZHEN_REGISTRY }}
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASS }}
