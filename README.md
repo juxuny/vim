@@ -16,7 +16,8 @@ git clone https://github.com/juxuny/vim.git
 
 # run vim in current direcory
 #docker run --rm -it -w /work -v ${PWD}:/work  vim /bin/bash
-docker run --rm -it 
+docker run --rm -it \
+  --user $(id -u):$(id -g)
   -w /work -v ${PWD}:/work \
   --entrypoint vim \
   -v /etc/passwd:/etc/passwd:ro \
@@ -74,7 +75,7 @@ docker run --rm -it
   * `coc-pylsp`
   * `coc-snippets`
 
-### v1.2.0 & latest
+### v1.2.0
 
 * add *jedi-vim* and *pip3*
 * *F1* restart go-lsp
@@ -116,4 +117,5 @@ docker run --rm -it
 * *Ctrl + N* open new file
 * *Ctrl + Shift + F* search content in directory
 * *Ctrl + 6* switch to last file
+
 
