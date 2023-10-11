@@ -9,9 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: registry.cn-shenzhen.aliyuncs.com/juxuny-public/docker:dind
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: sh build-tabnine.sh
+    - name: Login Registry
+      uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+      with:
+        registry: ${{ env.ALIYUN_SHENZHEN_REGISTRY }}
+        username: ${{ env.DOCKER_USER }}
+        password: ${{ env.DOCKER_PASS }}
+    - name: Download Archive Files
+      run: sh dl.sh
