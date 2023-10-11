@@ -69,6 +69,10 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> <C-h> :History <cr>
 
+autocmd FileType go nmap <buffer> gd :GoDef<cr>
+autocmd FileType go nmap <buffer> gi :GoImplements<cr>
+autocmd FileType go nmap <buffer> gr :GoRefer<cr>
+
 " format code
 autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
 autocmd FileType go nmap <buffer> fmt :!go fmt % <cr>

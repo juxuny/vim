@@ -21,7 +21,7 @@ ENV TERM=xterm-256color
 ENV PATH=$PATH:$HOME/.vimpkg/bin:$GOPATH/bin:$GOROOT/bin
 
 RUN apt-vim install -y https://github.com/preservim/nerdtree.git
-RUN apt-vim install -y https://github.com/ctrlpvim/ctrlp.vim.git
+#RUN apt-vim install -y https://github.com/ctrlpvim/ctrlp.vim.git
 RUN apt-vim install -y https://github.com/groenewege/vim-less.git
 RUN apt-vim install -y https://github.com/pangloss/vim-javascript.git
 RUN apt-vim install -y https://github.com/vim-ruby/vim-ruby.git

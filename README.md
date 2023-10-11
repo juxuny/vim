@@ -21,9 +21,17 @@ docker run --rm -it
   --entrypoint vim \
   -v /etc/passwd:/etc/passwd:ro \
   -v /etc/group:/etc/group:ro  \
-  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.5.0 \
+  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:go1.20-v1.7.1 \
   "$@"
 ```
+
+## go1.20-v1.7.1
+
+* add key map:
+  * gr :GoRefer
+  * gd: :GoDef
+  * gi : GoImplements
+
 ### v1.6.0
 
 * shortcut 
