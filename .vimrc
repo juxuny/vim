@@ -145,5 +145,5 @@ nmap <silent> <F2> <Plug>(ale_next_wrap)
 " disable markdown file folding
 let g:markdown_folding = 0
 
-" coc.nvim
-let g:syntastic_go_checkers = ['govet', 'errcheck', 'go']
+" run golangci-lint in whole package
+let g:ale_go_golangci_lint_package=1
