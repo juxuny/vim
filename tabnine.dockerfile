@@ -45,7 +45,7 @@ RUN apt-vim install -y https://github.com/tpope/vim-commentary.git
 RUN apt-vim install -y https://github.com/terryma/vim-multiple-cursors.git
 RUN apt-vim install -y https://github.com/junegunn/fzf.vim.git
 RUN apt-vim install -y https://github.com/peitalin/vim-jsx-typescript.git
-RUN apt-vim install -y https://github.com/dense-analysis/ale.git
+# RUN apt-vim install -y https://github.com/dense-analysis/ale.git
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 RUN echo "\n\n\n" | ~/.fzf/install
 
