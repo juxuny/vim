@@ -25,6 +25,10 @@ docker run --rm -it \
   registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:go1.20-v1.7.1 \
   "$@"
 ```
+## go1.20-v1.7.3
+
+* add key map:
+  * <F5>: *.tsx file reorder import
 
 ## go1.20-v1.7.1
 
