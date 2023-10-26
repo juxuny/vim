@@ -22,9 +22,14 @@ docker run --rm -it \
   --entrypoint vim \
   -v /etc/passwd:/etc/passwd:ro \
   -v /etc/group:/etc/group:ro  \
-  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:go1.20-v1.7.1 \
+  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.7.4 \
   "$@"
 ```
+
+## v1.7.4
+
+* fix coc-nvim gopls execute args
+
 ## go1.20-v1.7.3
 
 * add key map:
