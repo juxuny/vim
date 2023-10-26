@@ -74,4 +74,5 @@ USER root
 RUN chown -R vim:vim /home/vim
 USER vim
 RUN mkdir -p $HOME/.cache && chmod 777 $HOME/.cache
+COPY coc-settings.json /home/vim/.vim/coc-settings.json
 

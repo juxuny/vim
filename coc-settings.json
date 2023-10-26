@@ -1,0 +1,4 @@
+{
+  "go.goplsArgs": ["-remote=auto"],
+  "go.goplsPath": "/home/vim/gopath/bin/gopls"
+}
