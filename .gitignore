@@ -4,3 +4,4 @@ tmp
 *.gz
 *.tar
 *.tar.gz
+hook/
