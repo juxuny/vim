@@ -1,9 +1,10 @@
 FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:base-v1.2.0
+USER root
 ADD entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
-ENTRYPOINT /bin/entrypoint.sh
+ENTRYPOINT /usr/bin/entrypoint.sh
+
 # install node
-USER root
 ADD node-v16.20.0-linux-x64.tar.gz $HOME
 ENV PATH=${PATH}:$HOME/node-v16.20.0-linux-x64/bin
 RUN chown -R $UID:$GID $HOME
