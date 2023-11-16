@@ -1,6 +1,6 @@
 FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:base-v1.2.0
-ADD entrypoint.sh /bin/entrypoint.sh
-RUN chmod +x /bin/entrypoint.sh
+ADD entrypoint.sh /usr/bin/entrypoint.sh
+RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT /bin/entrypoint.sh
 # install node
 USER root
