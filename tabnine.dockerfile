@@ -64,8 +64,10 @@ RUN npm install -g yarn
 RUN cd $HOME/.vim/bundle/coc.nvim && yarn install
 RUN vim +'GoInstallBinaries' +qall
 WORKDIR $HOME
-COPY init.vim .
+COPY coc-settings.json /home/vim/.vim/coc-settings.json
+COPY *.vim .
 RUN vim -s init.vim 
+RUN vim -s install-clangd.vim
 
 # install nvm
 COPY install-nvm.sh .
@@ -78,5 +80,4 @@ USER root
 RUN chown -R vim:vim /home/vim
 USER vim
 RUN mkdir -p $HOME/.cache && chmod 777 $HOME/.cache
-COPY coc-settings.json /home/vim/.vim/coc-settings.json
 
