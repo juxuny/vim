@@ -67,10 +67,6 @@ WORKDIR $HOME
 COPY coc-settings.json /home/vim/.vim/coc-settings.json
 COPY *.vim .
 RUN vim -s init.vim 
-ADD clangd-linux-16.0.2.zip .
-RUN ls -lha
-RUN if [ -f clangd-linux-16.0.2.zip ]; then unzip clangd-linux-16.0.2.zip; fi
-RUN mv clangd_16.0.2/bin/clangd /usr/local/bin && rm -rf clangd_16.0.2
 
 # install nvm
 COPY install-nvm.sh .
@@ -78,8 +74,10 @@ COPY install-nvm-wrapper.sh .
 COPY bashrc.expand .
 RUN cat install-nvm-wrapper.sh | bash
 
-
 USER root 
+ADD clangd-linux-16.0.2.zip .
+RUN if [ -f clangd-linux-16.0.2.zip ]; then unzip clangd-linux-16.0.2.zip; fi
+RUN mv clangd_16.0.2/bin/clangd /usr/local/bin && rm -rf clangd_16.0.2
 RUN chown -R vim:vim /home/vim
 USER vim
 RUN mkdir -p $HOME/.cache && chmod 777 $HOME/.cache
