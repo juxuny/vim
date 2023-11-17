@@ -67,7 +67,8 @@ WORKDIR $HOME
 COPY coc-settings.json /home/vim/.vim/coc-settings.json
 COPY *.vim .
 RUN vim -s init.vim 
-RUN vim -s install-clangd.vim
+ADD clangd-linux-16.0.2.zip .
+RUN mv clangd-linux-16.0.2/bin/clangd /usr/local/bin && rm -rf clangd-linux-16.0.2
 
 # install nvm
 COPY install-nvm.sh .
