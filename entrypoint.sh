@@ -5,4 +5,4 @@ if [ -d ./hook ]; then
 		echo $scripts
 	done
 fi
-vim "$@"
+vim "$ENTRYPOINT_ARGS" "$@"
