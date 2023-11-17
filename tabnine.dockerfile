@@ -1,6 +1,6 @@
 FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:base-v1.2.0
-RUN apt-get install -y bear
 USER root
+RUN apt-get install -y bear
 ADD entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT /usr/bin/entrypoint.sh
