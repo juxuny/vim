@@ -1,6 +1,7 @@
 FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:base-v1.2.0
 USER root
 RUN apt-get install -y bear gcc g++ make
+ENV C_INCLUDE_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/include
 ADD entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT /usr/bin/entrypoint.sh
@@ -52,15 +53,12 @@ RUN apt-vim install -y https://github.com/preservim/nerdtree.git && \
     apt-vim install -y https://github.com/idanarye/vim-merginal.git && \
     apt-vim install -y https://github.com/fatih/vim-go.git
 
-RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-RUN echo "\n\n\n" | ~/.fzf/install
+RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
+    echo "\n\n\n" | ~/.fzf/install
 
-RUN npm -g install js-beautify
-RUN pip3 install jedi
+RUN npm -g install js-beautify && pip3 install jedi
 
-RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git
-RUN npm config set registry http://registry.npmmirror.com && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install
-RUN vim +'GoInstallBinaries' +qall
+RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git && npm config set registry http://registry.npmmirror.com && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
 WORKDIR $HOME
 COPY coc-settings.json /home/vim/.vim/coc-settings.json
 COPY *.vim .
