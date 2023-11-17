@@ -26,6 +26,10 @@ docker run --rm -it \
   "$@"
 ```
 
+## v1.8.0
+
+* add coc-protobuf
+
 ## v1.7.6
 
 * add coc-clangd
