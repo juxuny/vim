@@ -26,6 +26,10 @@ docker run --rm -it \
   "$@"
 ```
 
+## v1.7.6
+
+* add coc-clangd
+
 ## v1.7.4
 
 * fix coc-nvim gopls execute args
