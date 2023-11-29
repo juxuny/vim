@@ -1,7 +1,7 @@
 FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:base-v1.2.0
 USER root
-RUN apt-get install -y bear gcc g++ make
-ENV C_INCLUDE_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/include
+RUN apt-get install -y gcc-9 gcc-10 gcc-11 gcc-12 g++-9 g++-10 g++-11 g++-12 make
+# ENV C_INCLUDE_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/include
 ADD entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT /usr/bin/entrypoint.sh
