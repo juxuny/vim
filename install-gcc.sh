@@ -11,7 +11,7 @@ function download_gcc_source() {
 
 function compile_and_install() {
 	version="$1"
-	cd ${srd_dir}/
+	cd ${src_dir}
 	tar xvzf gcc-${version}.tar.gz
 	cd gcc-${version}
 	./configure
