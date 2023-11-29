@@ -1,6 +1,9 @@
 FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:base-v1.2.0
 USER root
 RUN apt-get install -y gcc g++ make
+COPY install-gcc.sh /work/install-gcc.sh
+WORKDIR /work
+RUN chmod +x install-gcc.sh && ./install-gcc.sh
 # ENV C_INCLUDE_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/include
 ADD entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
