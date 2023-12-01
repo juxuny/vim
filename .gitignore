@@ -5,3 +5,4 @@ tmp
 *.tar
 *.tar.gz
 hook/
+*.zip

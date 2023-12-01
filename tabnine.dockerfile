@@ -1,14 +1,17 @@
 FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/builder:gcc-10.4.0 AS gcc-10.4.0
-FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/builder:gcc-10.4.0 AS gcc-11.3.0
-FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/builder:gcc-10.4.0 AS gcc-12.2.0
 
-FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:base-v1.2.0
+FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/builder:gcc-11.3.0 AS gcc-11.3.0
+
+FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/builder:gcc-12.2.0 AS gcc-12.2.0
+
+FROM registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:base-v1.2.0 as final
 USER root
 WORKDIR /work
 RUN mkdir -p /usr/local/lib/gcc/x86_64-pc-linux-gnu
 COPY --from=gcc-10.4.0 /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.4.0 /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.4.0
 COPY --from=gcc-11.3.0 /usr/local/lib/gcc/x86_64-pc-linux-gnu/11.3.0 /usr/local/lib/gcc/x86_64-pc-linux-gnu/11.3.0
 COPY --from=gcc-12.2.0 /usr/local/lib/gcc/x86_64-pc-linux-gnu/12.2.0 /usr/local/lib/gcc/x86_64-pc-linux-gnu/12.2.0
+
 # ENV C_INCLUDE_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/include
 ADD entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
