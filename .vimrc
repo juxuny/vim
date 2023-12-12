@@ -152,3 +152,4 @@ let g:ale_go_golangci_lint_package=1
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+set statusline+=%F
