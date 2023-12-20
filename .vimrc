@@ -58,6 +58,8 @@ inoremap <C-Y> <C-\><C-O>b
 inoremap <C-B> <C-\><C-O>w
 inoremap <C-H> <Left>
 inoremap <C-L> <Right>
+inoremap <C-J> <Down>
+inoremap <C-K> <Up>
 " imap <C-l> <ESC>$a
 " imap <C-h> <ESC>^i
 " nmap <C-l> <ESC>$
