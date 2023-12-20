@@ -99,7 +99,7 @@ RUN cat install-nvm-wrapper.sh | bash
 USER root 
 ADD clangd-linux-16.0.2.zip .
 RUN if [ -f clangd-linux-16.0.2.zip ]; then unzip clangd-linux-16.0.2.zip; fi
-RUN mv clangd_16.0.2/bin/clangd /usr/local/bin && rm -rf clangd_16.0.2 && chown -R vim:vim /home/vim
+RUN mv clangd_16.0.2/bin/clangd /usr/local/bin && chown -R vim:vim /home/vim
 USER vim
 RUN mkdir -p $HOME/.cache && chmod 777 $HOME/.cache
 
