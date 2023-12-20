@@ -22,9 +22,15 @@ docker run --rm -it \
   --entrypoint vim \
   -v /etc/passwd:/etc/passwd:ro \
   -v /etc/group:/etc/group:ro  \
-  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.7.4 \
+  registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.11.3 \
   "$@"
 ```
+
+## v1.11.3 
+
+* add key map
+  * C-Y, C-B 
+  * C-H, C-L: Left or Right
 
 ## v1.8.0
 
