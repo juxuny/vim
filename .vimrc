@@ -54,6 +54,10 @@ nmap <C-j> 20j
 imap <C-k> <ESC>20ki
 imap <C-j> <ESC>20ji
 nmap <C-k> 20k
+inoremap <C-Y> <C-\><C-O>b
+inoremap <C-B> <C-\><C-O>w
+inoremap <C-H> <Left>
+inoremap <C-L> <Right>
 " imap <C-l> <ESC>$a
 " imap <C-h> <ESC>^i
 " nmap <C-l> <ESC>$
