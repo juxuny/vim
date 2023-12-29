@@ -21,7 +21,9 @@ else
     set background=dark
 endif
 
-colorscheme onedark
+
+colorscheme dracula
+" colorscheme onedark
 " colorscheme solarized
 " colorscheme peaksea
 

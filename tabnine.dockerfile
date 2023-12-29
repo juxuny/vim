@@ -79,6 +79,10 @@ RUN apt-vim install -y https://github.com/preservim/nerdtree.git && \
     apt-vim install -y https://github.com/idanarye/vim-merginal.git && \
     apt-vim install -y https://github.com/fatih/vim-go.git
 
+COPY vim_config.json vim_config.json 
+RUN cat vim_config.json|apt-vim install -jy 
+RUN rm vim_config.json
+
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
     echo "\n\n\n" | ~/.fzf/install
 
