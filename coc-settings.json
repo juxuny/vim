@@ -1,4 +1,5 @@
 {
+  "diagnostic.displayByAle": true,
   "go.goplsArgs": ["-remote=auto"],
   "go.goplsPath": "/home/vim/gopath/bin/gopls",
   "clangd.path": "/usr/local/bin/clangd",
