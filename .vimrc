@@ -148,6 +148,7 @@ autocmd FileType sh set expandtab tabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.tsx,*.js,*.vue,*.ts,*.jsx nmap <buffer> <F5> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 autocmd BufRead,BufNewFile *.dockerfile set filetype=dockerfile
+autocmd BufRead,BufNewFile *.tsx,*.js,*.vue,*.ts,*.jsx setlocal commentstring={/*\ %s\ */}
 
 " jump to errors
 " nmap <silent> <F3> <Plug>(ale_previous_wrap)
