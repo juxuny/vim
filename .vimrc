@@ -83,10 +83,11 @@ autocmd FileType go nmap <buffer> gi :GoImplements<cr>
 autocmd FileType go nmap <buffer> gr :GoRefer<cr>
 
 " format code
-autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
+" autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
 autocmd FileType go nmap <buffer> fmt :!go fmt % <cr>
 autocmd FileType go nmap <buffer> <F1> :call go#lsp#Restart()<cr>
-autocmd BufNewFile,BufRead *.tsx,*.js,*.html,*.xml,*.vue,*.ts,*.jsx,*.json nmap <buffer> fmt :CocCommand prettier.formatFile<cr>
+autocmd BufNewFile,BufRead *.html,*.xml,*.json nmap <buffer> fmt :call CocAction('runCommand', 'prettier.formatFile')<cr>
+autocmd BufNewFile,BufRead *.tsx,*.vue,*.ts,*.jsx nmap <buffer> fmt :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:call CocAction('runCommand', 'prettier.formatFile')<cr>
 
 " show branch name on statusline
 set laststatus=2
