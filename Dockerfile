@@ -17,5 +17,4 @@ RUN cd /usr/local/lib/apt-vim && apt-vim init
 RUN apt-get install -y vim-nox mono-complete
 COPY install-plugins.sh /root/
 RUN bash /root/install-plugins.sh
-CMD ["/bin/bash"]
 ENTRYPOINT ["vim"]

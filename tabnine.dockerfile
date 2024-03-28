@@ -33,8 +33,9 @@ RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT /usr/bin/entrypoint.sh
 
 # install node
-ADD node-v16.20.0-linux-x64.tar.gz $HOME
-ENV PATH=${PATH}:$HOME/node-v16.20.0-linux-x64/bin
+# ADD node-v16.20.0-linux-x64.tar.gz $HOME
+ADD node-v20.11.0-linux-x64.tar.gz $HOME
+ENV PATH=${PATH}:$HOME/node-v20.11.0-linux-x64/bin
 RUN chown -R $UID:$GID $HOME
 USER vim
 # init vim plugin manager
