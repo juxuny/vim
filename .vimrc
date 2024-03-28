@@ -86,6 +86,7 @@ autocmd FileType go nmap <buffer> gr :GoRefer<cr>
 autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
 autocmd FileType go nmap <buffer> fmt :!go fmt % <cr>
 autocmd FileType go nmap <buffer> <F1> :call go#lsp#Restart()<cr>
+autocmd BufNewFile,BufRead *.tsx,*.js,*.html,*.xml,*.vue,*.ts,*.jsx,*.json nmap <buffer> fmt :!npm run prettier %<cr>
 
 " show branch name on statusline
 set laststatus=2
@@ -144,7 +145,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 
 " set auto indent space width
-autocmd BufNewFile,BufRead *.tsx,*.js,*.html,*.xml,*.vue,*.ts,*.jsx,*.json set expandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.tsx,*.js,*.html,*.xml,*.vue,*.ts,*.jsx,*.json set expandtab tabstop=2 shiftwidth=2
 autocmd FileType sh set expandtab tabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.tsx,*.js,*.vue,*.ts,*.jsx nmap <buffer> <F5> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
