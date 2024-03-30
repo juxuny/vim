@@ -45,7 +45,7 @@ COPY .vimrc $HOME/.vimrc
 
 # install golang
 # ADD go1.18.10.linux-amd64.tar.gz $HOME
-ADD go1.20.8.linux-amd64.tar.gz $HOME
+ADD go1.21.8.linux-amd64.tar.gz $HOME
 ENV GOPATH=$HOME/gopath
 ENV GOPROXY=https://goproxy.cn
 ENV GOROOT=$HOME/go
