@@ -27,25 +27,25 @@ docker run --rm -it \
   "$@"
 
 # use for developing golang
-docker run --rm -it \
-        --user $(id -u):$(id -g) \
-        -w /work  \
-        -v ${PWD}:/work \
-        --entrypoint bash \
-        -e JAVA_HOME=/home/vim/jdk/jdk-11.0.18 \
-        -e MAVEN_HOME=/home/vim/maven/apache-maven-3.9.4 \
-        -v /etc/passwd:/etc/passwd:ro \
-        -v $GOPATH:/home/vim/gopath \
-        -v $HOME/.nvim/maven:/home/vim/maven \
-        -v $HOME/.nvim/jdk:/home/vim/jdk \
-        -v /etc/group:/etc/group:ro  \
-        registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.15.4 \
-        "$@"
 ```
 
 ## Examples
 
-### Use for QEMU develop
+### Use for Golang Develoment
+```shell
+docker run --rm -it \
+        --user $(id -u):$(id -g) \
+        -w /work  \
+        -v ${PWD}:/work \
+        --entrypoint vim \
+        -v /etc/passwd:/etc/passwd:ro \
+        -v $GOPATH:/home/vim/gopath \
+        -v /etc/group:/etc/group:ro  \
+        registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.16.0 \
+        "$@"
+```
+
+### Use for QEMU development
 
 ```shell
 # Ubuntu 22.04
