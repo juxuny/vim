@@ -43,6 +43,11 @@ docker run --rm -it \
         "$@"
 ```
 
+## v1.16.1
+
+* ,n for Reveal file in tree
+* open NERDTree default
+
 ## v1.15.4 
 
 * add plugins
