@@ -2,7 +2,7 @@
 
 ## Usage
 
-## Pull image from docker hub
+### Pull image from docker hub
 
 
 ```bash
@@ -27,58 +27,113 @@ docker run --rm -it \
   "$@"
 
 # use for developing golang
+```
+
+## Examples
+
+### Use for Golang Develoment
+```shell
 docker run --rm -it \
         --user $(id -u):$(id -g) \
         -w /work  \
         -v ${PWD}:/work \
-        --entrypoint bash \
-        -e JAVA_HOME=/home/vim/jdk/jdk-11.0.18 \
-        -e MAVEN_HOME=/home/vim/maven/apache-maven-3.9.4 \
+        --entrypoint vim \
         -v /etc/passwd:/etc/passwd:ro \
         -v $GOPATH:/home/vim/gopath \
-        -v $HOME/.nvim/maven:/home/vim/maven \
-        -v $HOME/.nvim/jdk:/home/vim/jdk \
         -v /etc/group:/etc/group:ro  \
-        registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.15.4 \
+        registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.16.0 \
         "$@"
 ```
 
+<<<<<<< HEAD
 ## v1.16.1
 
 * ,n for Reveal file in tree
 * open NERDTree default
 
 ## v1.15.4 
+=======
+### Use for QEMU development
+
+```shell
+# Ubuntu 22.04
+git clone https://github.com/qemu/qemu.git
+cd qemu
+sudo apt install python3-venv flex bison libsdl2-dev ninja-build libjpeg-dev libpixman-1-dev libslirp-dev python3-pip libnfs-dev libbz2-dev libepoxy-dev libibumad-dev
+pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 install sphinx==5.3.0
+pip3 install sphinx_rtd_theme==1.1.1
+pip3 install meson
+pip3 install jinja2
+pip3 install requests
+./configure --enable-vnc --enable-vnc-jpeg --enable-user --enable-slirp --enable-kvm --enable-opengl --enable-libudev --enable-bzip2 --enable-vhost-user --enable-user --enable-vhost-net --enable-libnfs --enable-system
+make -j175
+
+
+docker run --rm -it \
+        --user $(id -u):$(id -g) \
+        -w ${PWD}  \
+        -v ${PWD}:${PWD} \
+	-e C_INCLUDE_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/include \
+	-v /usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:ro \
+	-v /usr/include:/usr/include:ro \
+        --entrypoint vim \
+        -v /etc/passwd:/etc/passwd:ro \
+        -v $HOME/.nvim/gopath:/home/vim/gopath \
+	-v $HOME/.nvim/coc-settings.json:/home/vim/.vim/coc-settings.json:ro \
+        -v /etc/group:/etc/group:ro  \
+        registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.16.0 \
+        "$@"
+```
+
+file: $HOME/.nvim/coc-settings.json
+```json
+{
+  "diagnostic.displayByAle": false,
+  "go.goplsArgs": ["-remote=auto"],
+  "go.goplsPath": "/home/vim/gopath/bin/gopls",
+  "clangd.path": "/usr/local/bin/clangd",
+  "clangd.compilationDatabasePath": "./build",
+  "clangd.arguments": [
+    "--compile-commands-dir=${cwd}/build"
+  ]
+}
+```
+
+## Update
+
+### v1.15.4 
+>>>>>>> d958700d1b4a4609aaa66e939aa969ba288bf802
 
 * add plugins
   * support cql
   * npm prettier format file
 
 
-## v1.11.3 
+### v1.11.3 
 
 * add key map
   * C-Y, C-B 
   * C-H, C-L: Left or Right
 
-## v1.8.0
+### v1.8.0
 
 * add coc-protobuf
 
-## v1.7.6
+### v1.7.6
 
 * add coc-clangd
 
-## v1.7.4
+### v1.7.4
 
 * fix coc-nvim gopls execute args
 
-## go1.20-v1.7.3
+### go1.20-v1.7.3
 
 * add key map:
   * <F5>: *.tsx file reorder import
 
-## go1.20-v1.7.1
+### go1.20-v1.7.1
 
 * add key map:
   * gr :GoRefer
@@ -97,7 +152,6 @@ docker run --rm -it \
   * gd: go to definition
   * gi: go to implement
   * ctrl+h: history / recent files  
-
 
 ### v1.4.0
 
