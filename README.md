@@ -45,7 +45,6 @@ docker run --rm -it \
         "$@"
 ```
 
-<<<<<<< HEAD
 ## v1.16.1
 
 * ,n for Reveal file in tree
@@ -103,7 +102,6 @@ file: $HOME/.nvim/coc-settings.json
 ## Update
 
 ### v1.15.4 
->>>>>>> d958700d1b4a4609aaa66e939aa969ba288bf802
 
 * add plugins
   * support cql
