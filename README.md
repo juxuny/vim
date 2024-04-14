@@ -51,8 +51,8 @@ docker run --rm -it \
 * ,n for Reveal file in tree
 * open NERDTree default
 
+    
 ## v1.15.4 
-=======
 ### Use for QEMU development
 
 ```shell
@@ -103,11 +103,11 @@ file: $HOME/.nvim/coc-settings.json
 ## Update
 
 ### v1.15.4 
->>>>>>> d958700d1b4a4609aaa66e939aa969ba288bf802
 
 * add plugins
   * support cql
   * npm prettier format file
+
 
 
 ### v1.11.3 
@@ -223,6 +223,8 @@ file: $HOME/.nvim/coc-settings.json
 * *Ctrl + N* open new file
 * *Ctrl + Shift + F* search content in directory
 * *Ctrl + 6* switch to last file
+
+
 
 
 
