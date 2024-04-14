@@ -1,1 +1,1 @@
-:CocInstall -sync coc-tabnine coc-json coc-css coc-eslint coc-wxml coc-xml coc-snippets coc-clangd coc-protobuf coc-tsserver coc-html|q
+:CocInstall -sync coc-tabnine coc-tsserver coc-json coc-html coc-sql coc-css coc-eslint coc-wxml coc-xml coc-go coc-sh coc-java coc-snippets coc-clangd coc-protobuf coc-prettier |q
