@@ -55,6 +55,7 @@ ENV PATH=$PATH:$HOME/.vimpkg/bin:$GOPATH/bin:$GOROOT/bin
 #RUN apt-vim install -y https://github.com/ctrlpvim/ctrlp.vim.git
 #RUN apt-vim install -y https://github.com/Vimjas/vim-python-pep8-indent.git
 #RUN apt-vim install -y https://github.com/joshdick/onedark.nvim.git
+# apt-vim install -y https://github.com/plasticboy/vim-markdown.git && \
 
 RUN apt-vim install -y https://github.com/preservim/nerdtree.git && \
     apt-vim install -y https://github.com/groenewege/vim-less.git && \
@@ -62,7 +63,6 @@ RUN apt-vim install -y https://github.com/preservim/nerdtree.git && \
     apt-vim install -y https://github.com/vim-ruby/vim-ruby.git && \
     apt-vim install -y https://github.com/leafgarland/typescript-vim.git && \
     apt-vim install -y https://github.com/sophacles/vim-bundle-mako.git && \
-    apt-vim install -y https://github.com/plasticboy/vim-markdown.git && \
     apt-vim install -y https://github.com/vim-scripts/nginx.vim.git && \
     apt-vim install -y https://github.com/rust-lang/rust.vim.git && \
     apt-vim install -y https://github.com/vim-scripts/peaksea.git &&  \
