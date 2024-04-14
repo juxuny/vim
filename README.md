@@ -45,11 +45,12 @@ docker run --rm -it \
         "$@"
 ```
 
-<<<<<<< HEAD
 ## v1.16.1
 
 * ,n for Reveal file in tree
 * open NERDTree default
+* rm plugins: coc-less, coc-sass, coc-php, coc-pylsp, coc-rename
+
 
     
 ## v1.15.4 
@@ -223,9 +224,4 @@ file: $HOME/.nvim/coc-settings.json
 * *Ctrl + N* open new file
 * *Ctrl + Shift + F* search content in directory
 * *Ctrl + 6* switch to last file
-
-
-
-
-
 

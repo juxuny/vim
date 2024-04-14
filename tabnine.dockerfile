@@ -55,6 +55,7 @@ ENV PATH=$PATH:$HOME/.vimpkg/bin:$GOPATH/bin:$GOROOT/bin
 #RUN apt-vim install -y https://github.com/ctrlpvim/ctrlp.vim.git
 #RUN apt-vim install -y https://github.com/Vimjas/vim-python-pep8-indent.git
 #RUN apt-vim install -y https://github.com/joshdick/onedark.nvim.git
+# apt-vim install -y https://github.com/plasticboy/vim-markdown.git && \
 
 RUN apt-vim install -y https://github.com/preservim/nerdtree.git && \
     apt-vim install -y https://github.com/groenewege/vim-less.git && \
@@ -62,7 +63,6 @@ RUN apt-vim install -y https://github.com/preservim/nerdtree.git && \
     apt-vim install -y https://github.com/vim-ruby/vim-ruby.git && \
     apt-vim install -y https://github.com/leafgarland/typescript-vim.git && \
     apt-vim install -y https://github.com/sophacles/vim-bundle-mako.git && \
-    apt-vim install -y https://github.com/plasticboy/vim-markdown.git && \
     apt-vim install -y https://github.com/vim-scripts/nginx.vim.git && \
     apt-vim install -y https://github.com/rust-lang/rust.vim.git && \
     apt-vim install -y https://github.com/vim-scripts/peaksea.git &&  \
@@ -90,7 +90,8 @@ RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
 
 RUN npm -g install js-beautify && pip3 install jedi
 
-RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git && npm config set registry http://registry.npmmirror.com && npm config set coc.nvim:registry http://registry.npmmirror.com && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
+RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git && npm config set registry http://registry.npmjs.org && npm config set coc.nvim:registry http://registry.npmjs.org && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
+# RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git && npm config set registry http://registry.npmmirror.com && npm config set coc.nvim:registry http://registry.npmmirror.com && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
 WORKDIR $HOME
 COPY coc-settings.json /home/vim/.vim/coc-settings.json
 COPY *.vim .
