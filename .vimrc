@@ -91,7 +91,8 @@ autocmd FileType go nmap <buffer> gr :GoRefer<cr>
 " autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
 autocmd FileType go nmap <buffer> fmt :!go fmt % <cr>
 autocmd FileType go nmap <buffer> <F1> :call go#lsp#Restart()<cr>
-autocmd BufNewFile,BufRead *.html,*.xml,*.json nmap <buffer> fmt :call CocAction('runCommand', 'prettier.formatFile')<cr>
+" autocmd BufNewFile,BufRead *.html,*.xml,*.json nmap <buffer> fmt :call CocAction('runCommand', 'prettier.formatFile')<cr>
+autocmd BufNewFile,BufRead *.html,*.xml,*.json nmap <buffer> fmt :call CocActionAsync('format')<cr>
 autocmd BufNewFile,BufRead *.tsx,*.vue,*.ts,*.jsx nmap <buffer> fmt :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:call CocAction('runCommand', 'prettier.formatFile')<cr>
 autocmd BufNewFile,BufRead *.tsx,*.vue,*.ts,*.jsx,*.java,*.cc,*.cpp,*.c,*.h,*.hpp nmap <silent> rn <Plug>(coc-rename)
 
