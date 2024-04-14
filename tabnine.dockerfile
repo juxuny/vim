@@ -94,7 +94,7 @@ RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git && npm config se
 WORKDIR $HOME
 COPY coc-settings.json /home/vim/.vim/coc-settings.json
 COPY *.vim .
-RUN vim -s init.vim 
+RUN vim -S init.vim 
 
 # install nvm
 COPY install-nvm.sh .
