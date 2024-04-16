@@ -44,8 +44,12 @@ docker run --rm -it \
         registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.16.0 \
         "$@"
 ```
+## v1.16.2 
+
+* ,p for cat current file
 
 ## v1.16.1
+
 
 * ,n for Reveal file in tree
 * open NERDTree default
@@ -225,3 +229,4 @@ file: $HOME/.nvim/coc-settings.json
 * *Ctrl + Shift + F* search content in directory
 * *Ctrl + 6* switch to last file
 
+    
