@@ -87,6 +87,8 @@ nmap <silent> ,p :!cat %<cr>
 autocmd FileType go nmap <buffer> gd :GoDef<cr>
 autocmd FileType go nmap <buffer> gi :GoImplements<cr>
 autocmd FileType go nmap <buffer> gr :GoRefer<cr>
+autocmd FileType go nmap <buffer> gf :GoFillStruct<cr>
+autocmd FileType go nmap <buffer> rn :GoRename<cr>
 
 " format code
 " autocmd FileType javascript nmap <buffer> fmt :!js-beautify % > %.tmp && mv %.tmp % <cr>
