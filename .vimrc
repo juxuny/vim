@@ -46,13 +46,14 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 " NERDTreeToggle
-autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree | wincmd p
 " autocmd VimLeave * if argc() == 1 && !&modified | NERDTreeClose | endif
 " autocmd bufenter * NERDTreeMirror
 " autocmd bufleave * NERDTreeClose
 nmap tt :NERDTreeToggle <cr>
 nmap <C-n> :Files <cr>
 nmap ,n :NERDTreeFind<CR>
+nmap ,, :NERDTreeFind<CR><c-w><c-w>
 " search text in directories
 nmap <C-S-f> :Ack 
 imap <C-o> <ESC>o
