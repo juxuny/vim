@@ -53,7 +53,7 @@ autocmd vimenter * NERDTree | wincmd p
 nmap tt :NERDTreeToggle <cr>
 nmap <C-n> :Files <cr>
 nmap ,n :NERDTreeFind<CR>
-nmap ,, :NERDTreeFind<CR><c-w><c-w>
+nmap ,, :NERDTreeFind<CR><c-w><c-p>
 " search text in directories
 nmap <C-S-f> :Ack 
 imap <C-o> <ESC>o
