@@ -44,9 +44,16 @@ docker run --rm -it \
         registry.cn-shenzhen.aliyuncs.com/juxuny-public/vim:v1.16.0 \
         "$@"
 ```
+
+## v1.16.4
+
+* rn => GoRename
+* gf => GoFillStruct
+
 ## v1.16.2 
 
 * ,p for cat current file
+
 
 ## v1.16.1
 
@@ -230,3 +237,4 @@ file: $HOME/.nvim/coc-settings.json
 * *Ctrl + 6* switch to last file
 
     
+
