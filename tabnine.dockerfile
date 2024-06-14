@@ -90,7 +90,7 @@ RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
 
 RUN npm -g install js-beautify && pip3 install jedi
 
-RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git && npm config set registry http://registry.npmjs.org && npm config set coc.nvim:registry http://registry.npmjs.org && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
+RUN apt-vim install -y https://github.com/juxuny/coc.nvim.git && npm config set registry http://registry.npmjs.org && npm config set coc.nvim:registry http://registry.npmjs.org && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
 # RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git && npm config set registry http://registry.npmmirror.com && npm config set coc.nvim:registry http://registry.npmmirror.com && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
 WORKDIR $HOME
 COPY coc-settings.json /home/vim/.vim/coc-settings.json

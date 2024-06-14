@@ -158,8 +158,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 
 " set auto indent space width
-autocmd BufNewFile,BufRead *.tsx,*.js,*.html,*.xml,*.vue,*.ts,*.jsx,*.json set expandtab tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.tsx,*.js,*.html,*.xml,*.vue,*.ts,*.jsx set expandtab tabstop=2 shiftwidth=2
 autocmd FileType sh set expandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.json set expandtab tabstop=4 shiftwidth=4
 " autocmd BufNewFile,BufRead *.tsx,*.js,*.vue,*.ts,*.jsx nmap <buffer> <F5> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:call CocAction('runCommand', 'prettier.formatFile')<cr>
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 autocmd BufRead,BufNewFile *.dockerfile set filetype=dockerfile
