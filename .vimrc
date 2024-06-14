@@ -84,6 +84,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> <C-h> :History <cr>
 nmap <silent> ,p :!cat %<cr>
+nmap ,o :CocList outline<cr>
 
 autocmd FileType go nmap <buffer> gd :GoDef<cr>
 autocmd FileType go nmap <buffer> gi :GoImplements<cr>
