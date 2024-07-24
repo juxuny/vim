@@ -107,11 +107,14 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'charvaluehex' ] ]
+      \             [ 'readonly', 'filename', 'modified', 'charvaluehex', 'git_statusline'] ]
       \ },
       \ 'component': {
       \   'charvaluehex': '0x%B'
       \ },
+      \ 'component_function': {
+      \   'git_statusline': 'FugitiveStatusline',
+      \ }
       \ }
 
 
