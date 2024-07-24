@@ -114,11 +114,12 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'git_statusline': 'FugitiveStatusline',
+      \   'git_blame': 'LightlineGitBlame'
       \ }
       \ }
 
 
-"CoC Settings
+"COC Settings
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -182,3 +183,10 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 set statusline+=%F
+
+function! LightlineGitBlame() abort
+  let blame = get(b:, 'coc_git_blame', '')
+  " return blame
+  return winwidth(0) > 120 ? blame : ''
+endfunction
+autocmd User CocGitStatusChange {command}
