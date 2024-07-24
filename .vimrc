@@ -107,7 +107,10 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'charvaluehex', 'git_statusline'] ]
+      \             [ 'readonly', 'filename', 'modified', 'charvaluehex', 'git_statusline'] ],
+      \   'right': [
+      \       [ 'filetype', 'fileencoding', 'lineinfo', 'percent' ],
+      \       [ 'git_blame' ] ]
       \ },
       \ 'component': {
       \   'charvaluehex': '0x%B'
