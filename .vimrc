@@ -31,7 +31,7 @@ colorscheme dracula
 " fzf
 set rtp+=~/.fzf
 " search files
-let $FZF_DEFAULT_COMMAND = 'find . -not -path "*.git/*" -not -path "*.svn*" -not -path "*.idea" -not -path "*node_modules/*"'
+let $FZF_DEFAULT_COMMAND = 'find . -not -path "*.git/*" -not -path "*.svn*" -not -path "*.idea" -not -path "*node_modules/*" -not -path "*vendor/*"'
 set encoding=utf-8
 
 " ----------------------------------------------------------- key mapping ---------------------------------------------------------
