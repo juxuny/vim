@@ -9,9 +9,10 @@ RUN groupadd -g $GID -o $NAME
 RUN useradd -m -u $UID -g $GID -o -s /bin/bash $NAME
 RUN mkdir -p /home/vim && chown -R $UID:$GID /home/vim
 # COPY source.list /etc/apt/sources.list
-RUN apt-get update && apt-get install -y tzdata git ruby-full gem ruby-dev curl ack-grep build-essential cmake python3-dev openjdk-11-jdk software-properties-common python3-pip python2 vim file
+RUN apt-get update && apt-get install -y tzdata git ruby-full gem ruby-dev curl ack-grep build-essential cmake python3-dev openjdk-11-jdk software-properties-common python3-pip python2 file
 RUN ln -s /usr/bin/python2 /usr/bin/python
 RUN add-apt-repository ppa:jonathonf/vim 
+RUN apt-get update && apt-get install -y vim
 RUN cd /usr/local/lib && git clone https://github.com/egalpin/apt-vim.git
 ENV PATH=$PATH:/usr/local/lib/apt-vim
 RUN cd /usr/local/lib/apt-vim && apt-vim init
@@ -91,11 +92,12 @@ RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
 
 RUN npm -g install js-beautify && pip3 install jedi
 
-RUN apt-vim install -y https://github.com/juxuny/coc.nvim.git && npm config set registry http://registry.npmjs.org && npm config set coc.nvim:registry http://registry.npmjs.org && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
+RUN apt-vim install -y https://github.com/juxuny/coc.nvim.git &&  cd $HOME/.vim/bundle/coc.nvim && npm install && vim +'GoInstallBinaries' +qall
+# RUN apt-vim install -y https://github.com/juxuny/coc.nvim.git && npm config set registry http://registry.npmjs.org && npm config set coc.nvim:registry http://registry.npmjs.org && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
 # RUN apt-vim install -y https://github.com/neoclide/coc.nvim.git && npm config set registry http://registry.npmmirror.com && npm config set coc.nvim:registry http://registry.npmmirror.com && npm install -g yarn && cd $HOME/.vim/bundle/coc.nvim && yarn install && vim +'GoInstallBinaries' +qall
 WORKDIR $HOME
 COPY coc-settings.json /home/vim/.vim/coc-settings.json
-COPY *.vim .
+COPY *.vim /home/vim/
 RUN vim -S init.vim 
 
 # install nvm

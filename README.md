@@ -45,6 +45,10 @@ docker run --rm -it \
         "$@"
 ```
 
+## v2.0.0
+
+* Update Vim version to v9+
+
 ## v1.16.4
 
 * rn => GoRename
