@@ -19,14 +19,17 @@ let g:solarized_termcolors=256
 if has('gui_running')
     set background=light
 else
-    set background=dark
+    " set background=dark
+    set background=light
 endif
 
 
-colorscheme dracula
+" colorscheme dracula
 " colorscheme onedark
 " colorscheme solarized
 " colorscheme peaksea
+let g:one_allow_italics = 1
+colorscheme one
 
 " fzf
 set rtp+=~/.fzf
