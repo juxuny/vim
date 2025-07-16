@@ -82,6 +82,7 @@ RUN apt-vim install -y https://github.com/preservim/nerdtree.git && \
     apt-vim install -y https://github.com/fatih/vim-go.git && \
     apt-vim install -y https://github.com/juxuny/vim-fugitive.git && \
     apt-vim install -y https://github.com/rakr/vim-one.git && \
+    apt-vim install -y https://github.com/NLKNguyen/papercolor-theme.git && \
     apt-vim install -y https://github.com/elubow/cql-vim.git 
 
 COPY vim_config.json vim_config.json 

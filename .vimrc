@@ -28,8 +28,10 @@ endif
 " colorscheme onedark
 " colorscheme solarized
 " colorscheme peaksea
-let g:one_allow_italics = 1
-colorscheme one
+#colorscheme one
+" let g:one_allow_italics = 1
+" let g:gruvbox_italic=1
+colorscheme PaperColor
 
 " fzf
 set rtp+=~/.fzf
