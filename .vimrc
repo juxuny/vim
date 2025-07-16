@@ -28,7 +28,7 @@ endif
 " colorscheme onedark
 " colorscheme solarized
 " colorscheme peaksea
-#colorscheme one
+" colorscheme one
 " let g:one_allow_italics = 1
 " let g:gruvbox_italic=1
 colorscheme PaperColor
